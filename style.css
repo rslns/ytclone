@@ -1,0 +1,385 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* General styles */
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Main container to hold the video cards */
+        
+        .maincontainer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 columns per row */
+            gap: 16px;
+            /* Space between cards */
+            padding: 20px;
+            box-sizing: border-box;
+            /* Ensure padding is included in the container width */
+        }
+        /* Styling each video card */
+        
+        .card {
+            box-sizing: border-box;
+            /* Includes padding and border in the width */
+            margin-bottom: 16px;
+            /* Space below each card */
+        }
+        /* Optional responsiveness for medium screens (2 cards per row) */
+        
+        @media (max-width: 768px) {
+            .maincontainer {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 cards per row */
+            }
+        }
+        /* Optional responsiveness for small screens (1 card per row) */
+        
+        @media (max-width: 480px) {
+            .maincontainer {
+                grid-template-columns: 1fr;
+                /* 1 card per row */
+            }
+        }
+        /* Card styles */
+        
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        /* Thumbnail styles */
+        
+        .thumbnailcontainer img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .thumbnailcontainer:hover img {
+            transform: scale(1.1);
+        }
+        /* Details container */
+        
+        .detailscontainer {
+            padding: 10px;
+        }
+        /* General Styles */
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 10;
+            box-sizing: border-box;
+        }
+        /* Main container to hold the video cards */
+        
+        .maincontainer {
+            display: flex;
+            /* Activates Flexbox */
+            flex-wrap: wrap;
+            /* Allows items to wrap into rows */
+            gap: 16px;
+            /* Adds space between cards */
+            justify-content: flex-start;
+            /* Aligns items to the left */
+            align-items: flex-start;
+            /* Ensures vertical alignment starts at the top */
+            padding: 20px;
+            /* Adds spacing around the container */
+            margin: 0 auto;
+            /* Centers the entire container */
+        }
+        /* Card styling */
+        
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: calc(33.33% - 16px);
+            /* Adjust width for 3 cards per row */
+            max-width: 300px;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        /* Thumbnail container */
+        
+        .thumbnailcontainer img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .thumbnailcontainer:hover img {
+            transform: scale(1.1);
+        }
+        /* Details container */
+        
+        .detailscontainer {
+            padding: 10px;
+        }
+        /* Sidebar and Navigation */
+        
+        .sidebar {
+            width: 250px;
+            padding: 16px;
+        }
+        
+        .d-flex {
+            display: flex;
+            align-items: center;
+        }
+        /* Navigation bar */
+        
+        nav {
+            justify-content: space-between;
+            padding: 10px;
+            background-color: rgb(255, 255, 255);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        /* Space between left (hamburger and logo) */
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Adjust the gap for spacing */
+        }
+        /* Middle section (search box) */
+        
+        .nav-middle {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+        /* Space between right (video, bell, profile) */
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Add space between icons */
+        }
+        /* Hamburger menu */
+        
+        .nav-left i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* Logo image */
+        
+        .itlogo {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+        /* User image */
+        
+        .userimg {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+        /* Bell icon, video icon, mic icon */
+        
+        .nav-right i,
+        .nav-middle i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* Sidebar */
+        
+        .sidebar {
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            position: fixed;
+            top: 60px;
+            /* Below navbar */
+            left: 0;
+            height: calc(100vh - 60px);
+            /* To fit within the viewport height below the navbar */
+            overflow-y: auto;
+            /* Enable scrolling for sidebar */
+        }
+        /* Sidebar link styles */
+        
+        .sidebar a {
+            text-decoration: none;
+            /* Remove underline */
+            color: black;
+            /* Change to the desired color */
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        /* Hover effect for sidebar links */
+        
+        .sidebar a:hover {
+            color: #007BFF;
+            /* Change the hover color to a shade of your choice */
+        }
+        /* Sidebar icons */
+        
+        .sidebar a i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        /* Main content container */
+        
+        .maincontainer {
+            margin-top: 50px;
+            /* To account for the fixed navbar */
+            margin-left: 220px;
+            /* Adjust to match sidebar width */
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: rgb(255, 255, 255);
+            /* Add spacing between cards */
+        }
+        /* Individual cards */
+        
+        .card {
+            width: 300px;
+            margin: 10px;
+            border: 1px solid #bbbbbb;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .thumbnailcontainer {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .thumbnailimg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .detailscontainer {
+            padding: 10px;
+        }
+        
+        .detailscontainer h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+        
+        .detailscontainer p {
+            font-size: 14px;
+            color: gray;
+        }
+        /* Images */
+        
+        .itlogo,
+        .userimg {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        /* Search box */
+        
+        .search-box input {
+            border-color: rgb(126, 123, 123);
+            padding: 8px;
+            border-radius: 15px;
+            margin-right: 10px;
+            width: 300px;
+        }
+        
+        .search-box i {
+            font-size: 20px;
+        }
+        /* Styling the search container */
+        
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 5px 15px;
+            width: 300px;
+            /* Adjust the width of the search bar */
+            transition: width 0.3s ease;
+            /* Smooth animation for expanding the search bar */
+        }
+        /* Styling the input field */
+        
+        .search-input {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 14px;
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 20px;
+            color: #333;
+        }
+        /* Icon inside the search bar */
+        
+        .search-icon {
+            font-size: 18px;
+            color: #777;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        /* Hover effect for input and icon */
+        
+        .search-box i {
+            cursor: pointer;
+        }
+        
+        .search-box:hover {
+            width: 350px;
+            /* Expands the width of the search bar */
+        }
+        /* Focus effect on input */
+        
+        .search-input:focus {
+            border: 2px solid #007bff;
+            /* Adds a border color when focused */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            /* Adds a shadow effect when focused */
+        }
+        
+        .mic-icon {
+            font-size: 18px;
+            color: #777;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            /* Position it on the right side of the search bar */
+            top: 50%;
+            transform: translateY(-50%);
+        }
