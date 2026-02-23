@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyDuKQLyQPtZt6CSRDwUVwuxvbaubNRG5VM'; // Replace with your API key
+const API_KEY = ''; // Replace with your API key
 const searchInput = document.querySelector('.search-box input');
 const searchBtn = document.querySelector('.ri-search-line');
 const mainContainer = document.querySelector('.maincontainer');
@@ -63,5 +63,6 @@ function displayResults(videos) {
             handleSearch();
         }
     });
+
 
 }
